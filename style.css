@@ -1,0 +1,29 @@
+.c-item{
+    height: 450px;
+}
+
+.c-img{
+    height: 100%;
+    object-fit: cover;
+}
+
+.custom-bg{
+    background-color: #2ec1ac;
+}
+
+.custom-bg:hover{
+    background-color: #279e8c;
+}
+
+.availability-form{
+    margin-top: -18px;
+    position: relative;
+    z-index: 5;
+}
+
+@media screen and (max-width: 575px) {
+    .availability-form{
+        margin-top: 20px;
+        padding: 0 35px;
+    }
+}
