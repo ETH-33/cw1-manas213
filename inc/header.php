@@ -7,16 +7,16 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active me-2" aria-current="page" href="index.php">Home</a>
+                            <a class="nav-link active me-2" aria-current="page" href="#hm">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link me-2" href="rooms.php">Rooms</a>
+                            <a class="nav-link me-2" href="#rooms">Rooms</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link me-2" href="#">Facilities</a>
+                            <a class="nav-link me-2" href="#facilities">Facilities</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link me-2" href="#">Contact Us</a>
+                            <a class="nav-link me-2" href="#contact">Contact Us</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="about.php">About</a>
@@ -33,3 +33,23 @@
                 </div>
             </div>
         </nav>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const navLinks = document.querySelectorAll("nav a");
+        navLinks.forEach(link => {
+            link.addEventListener("click", function(event) {
+                event.preventDefault();
+                const targetId = link.getAttribute("href");
+                document.querySelector(targetId).scrollIntoView({
+                    behavior: "smooth"
+                });
+            });
+        });
+    });
+</script>
+        
+
+
+       
+        
