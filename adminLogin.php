@@ -1,4 +1,5 @@
 <?php
+    require("alert.php");
     require("connection.php");
 ?>
 <!DOCTYPE html>
@@ -7,60 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin Login</title>
-    <style>
-        *{
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-            font-family: 'Quicksand', sans-serif;
-        }
-        body{
-            background-color: #e8edf2;
-        }
-        .container{
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%); 
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            background-color: white;
-            padding: 20px; 
-            box-shadow: 0 50px 50px -50px darkslategrey;
-        }
-        div.container div.admForm{
-            width: 275px;
-            margin-right: 30px;
-        }
-        div.container div.admForm h2{
-            color: #1c1c1e;
-            margin-bottom: 20px;
-        }
-        div.container div.admForm input{
-            border: none;
-            outline: none;
-            border-radius: 0;
-            width: 100%;
-            border-bottom: 2px solid #1c1c1e;
-            margin-bottom: 25px;
-            padding: 7px 0;
-            font-size: 12px;
-        }
-        div.container div.admForm button{
-            color: white;
-            background-color: #1c1c1e;
-            border: none;
-            outline: none;
-            border-radius: 2px;
-            font-size: 12px;
-            padding: 5px 12px;
-            font-weight: 500;
-        }
-        div.container div.image .admImg{
-            width: 300px;
-        }
-    </style>
+    <link rel="stylesheet" href="css/adminlogin.css">
 </head>
 <body>
     <div class="container">
@@ -110,13 +58,13 @@
                 }
                 else
                 {
-                    echo "<script>alert('Invalid Admin Name or Password');</script>";
+                    alert('error', 'Login failed- Invalid username or password');
                 }
                 mysqli_stmt_close($SQLstmt);
             }
             else
             {
-                echo "<script>alert('Invalid Admin Name or Password');  </script>";
+                alert('error', 'Login failed- Invalid username or password');
             }
         }
     ?>

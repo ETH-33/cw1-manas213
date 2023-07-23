@@ -4,7 +4,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Restful Retreat</title>
-        <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/main.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
@@ -19,7 +18,7 @@
 
         <!-- carousel -->
         <div id="hero-carousel" class="carousel slide">
-            <div class="carousel-indicators">
+            <div class="carousel-indicators" >
                 <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#hero-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
@@ -50,7 +49,7 @@
         </div>
 
         <!-- check availability form -->
-        <div class="container availability-form">
+        <div class="container availability-form" >
             <div class="row">
                 <div class="col-lg-12 bg-white shadow p-4 rounded">
                     <h4 class="mb-4">Check Booking Availability</h4>
@@ -90,8 +89,8 @@
         </div>
 
         <!-- Our rooms -->
-        <h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font" id="rooms">Rooms & Rates</h2>
-        <div class="container">
+        <div class="container" id="rooms">
+            <h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font" >Rooms & Rates</h2>
             <div class="rooms-section">
                 <div class="rooms">
                     <div class="rooms-img">
@@ -173,23 +172,23 @@
         <h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font" id="facilities">Our Facilities</h2>
         <div class="container">
             <div class="row justify-content-evenly px-lg-0 px-md-0 px-5">
-                <div class="faccs col-lg-2 col-md-2 text-center rounded shadow py-4 my-3">
+                <div class="faccs col-lg-2 col-md-3 text-center rounded shadow py-4 my-3">
                     <img src="images/wifi.svg" alt="">
                     <h5 class="mt-3">Wifi</h5>
                 </div>
-                <div class="faccs col-lg-2 col-md-2 text-center rounded shadow py-4 my-3">
+                <div class="faccs col-lg-2 col-md-3 text-center rounded shadow py-4 my-3">
                     <img src="images/pool.svg">
                     <h5 class="mt-3">Swimming Pool</h5>
                 </div>
-                <div class="faccs col-lg-2 col-md-2 text-center rounded shadow py-4 my-3">
+                <div class="faccs col-lg-2 col-md-3 text-center rounded shadow py-4 my-3">
                     <img src="images/spa.svg">
                     <h5 class="mt-3">Spa & Massage</h5>
                 </div>
-                <div class="faccs col-lg-2 col-md-2 text-center rounded shadow py-4 my-3">
+                <div class="faccs col-lg-2 col-md-3 text-center rounded shadow py-4 my-3">
                     <img src="images/sauna.svg">
                     <h5 class="mt-3">Sauna</h5>
                 </div>
-                <div class="faccs col-lg-2 col-md-2 text-center rounded shadow py-4 my-3">
+                <div class="faccs col-lg-2 col-md-3 text-center rounded shadow py-4 my-3">
                     <img src="images/fun.svg">
                     <h5 class="mt-3">Fun & Games</h5>
                 </div>
@@ -198,23 +197,27 @@
 
         <!-- Contact Us --> 
         <section class="contact" id="contact">
-            <div class="contact-row">
-            <div class="contact-form">
-                <h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">Get in Touch</h2>
-                    <form>  
-                         <input type="text" id="formName" class="form-control form-control-lg mb-2" placeholder="Name">
-                        <input type="email" id="formEmail" class="form-control form-control-lg mb-2" placeholder="E-mail">
-                        <textarea id="formMessage" class="form-control form-control-lg mb-3" rows="5" placeholder="Message"></textarea>
-                        <div class="text-center">
-                            <button type="submit" class="contact-btn" tabIndex="-1">Send message</button>
-                        </div>
-                    </form>
+            <div class=" contact-row">
+                <div class="contact-form">
+                    <h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">Get in Touch</h2>
+                        <form>  
+                            <input type="text" id="formName" class="form-control form-control-lg mb-2" placeholder="Name">
+                            <input type="email" id="formEmail" class="form-control form-control-lg mb-2" placeholder="E-mail">
+                            <textarea id="formMessage" class="form-control form-control-lg mb-3" rows="5" placeholder="Message"></textarea>
+                            <div class="text-center">
+                                <button type="submit" class="contact-btn" tabIndex="-1">Send message</button>
+                            </div>
+                        </form>
                 </div>
+
                 <div class="map">
-                <h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">Find Us</h2>
+                    <h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">Find Us</h2>
                     <iframe class="rounded" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56543.829684715616!2d85.2830457511591!3d27.65580104418238!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb178514f97739%3A0xeb1f6e5c822e62ab!2sBhaisepati%2C%20Karyabinayak!5e0!3m2!1sen!2snp!4v1688491451898!5m2!1sen!2snp" height="350" width="700" loading="lazy"></iframe>
                 </div>
+                    
             </div>
+
+                 
         </section>
                     
         <!-- Footer -->

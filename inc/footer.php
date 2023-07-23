@@ -13,10 +13,10 @@
                     <h3>Useful Links</h3>
                     <ul>
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">Rooms</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#rooms">Rooms</a></li>
+                        <li><a href="#facilities">Services</a></li>
+                        <li><a href="about.php">About</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-4 col-md-3 item">
@@ -32,9 +32,26 @@
                     <a href="#"><i class="bi bi-twitter"></i></a>
                     <a href="#"><i class="bi bi-snapchat"></i></a>
                     <a href="#"><i class="bi bi-instagram"></i></a>
-                    <p class="copyright">Restful Retreatx © 2023</p>
+                    <p class="copyright">Restful Retreat © 2023</p>
                 </div>
             </div>
         </div>
     </footer>
 </div>
+
+<!-- <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const navLinks = document.querySelectorAll("nav a");
+        navLinks.forEach(link => {
+            const targetId = link.getAttribute("href");
+            if (targetId.startsWith("#")) {
+                link.addEventListener("click", function(event) {
+                    event.preventDefault();
+                    document.querySelector(targetId).scrollIntoView({
+                        behavior: "smooth"
+                    });
+                });
+            }
+        });
+    });
+</script> -->
