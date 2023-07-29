@@ -23,7 +23,7 @@
             </form>
 
             <div>
-                <span>Don't have an acccount? <a href="#registerModal" data-bs-toggle="modal" data-bs-target="#registerModal">Create one</a>.</span>
+                <span>Don't have an acccount?<a href="#registerModal" data-bs-toggle="modal" data-bs-target="#registerModal">Create one</a>.</span>
             </div>
         </div>
     </div>
@@ -32,7 +32,11 @@
 <div class="modal fade" id="registerModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
-            <form action="register.php" method="POST">
+        <div id="alertContainer"></div>
+            <form 
+            action="register.php" 
+            method="POST" 
+            enctype="multipart/form-data">
                 <div class="modal-header d-flex align-items-center">
                 <i class="bi bi-person-lines-fill fs-4 me-2"></i> <h1 class="modal-title fs-5">User Registration</h1>
                     <button type="reset" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -45,39 +49,39 @@
                     <div class="row">
                         <div class="col-md-6 ps-0 mb-3">
                             <label class="form-label">Name</label>
-                            <input type="text" class="form-control shadow-none" name="name">
+                            <input type="text" class="form-control shadow-none" name="name" required>
                         </div>
                         <div class="col-md-6 p-0">
                             <label class="form-label">Email</label>
-                            <input type="email" class="form-control shadow-none" name="email">
+                            <input type="email" class="form-control shadow-none" name="email" required>
                         </div>
                         <div class="col-md-6 ps-0 mb-3">
                             <label class="form-label">Phone Number</label>
-                            <input type="number" class="form-control shadow-none" name="phn">
+                            <input type="number" class="form-control shadow-none" name="phn" required>
                         </div>
                         <div class="col-md-6 p-0 mb-3">
                             <label class="form-label">ID</label>
-                            <input type="file" class="form-control shadow-none" name="id">
+                            <input type="file" class="form-control shadow-none" name="image" required>
                         </div>
                         <div class="col-md-12 p-0 mb-3">
                             <label class="form-label">Address</label>
-                            <textarea class="form-control shadow-none" rows="1" name="address"></textarea>
+                            <textarea class="form-control shadow-none" rows="1" name="address" required></textarea>
                         </div>
                         <div class="col-md-6 ps-0 mb-3">
                             <label class="form-label">Country</label>
-                            <input type="text" class="form-control shadow-none" name="country">
+                            <input type="text" class="form-control shadow-none" name="country" required>
                         </div>
                         <div class="col-md-6 p-0">
                             <label class="form-label">Date of Birth</label>
-                            <input type="date" class="form-control shadow-none" name="dob">
+                            <input type="date" class="form-control shadow-none" name="dob" required>
                         </div>
                         <div class="col-md-6 ps-0 mb-3">
                             <label class="form-label">Password</label>
-                            <input type="password" class="form-control shadow-none" name="passwd">
+                            <input type="password" class="form-control shadow-none" name="passwd" required>
                         </div>
                         <div class="col-md-6 p-0">
                             <label class="form-label">Confirm Password</label>
-                            <input type="password" class="form-control shadow-none" name="cpasswd">
+                            <input type="password" class="form-control shadow-none" name="cpasswd" required>
                         </div>
                     </div>
                     <div class="text-center">
@@ -88,7 +92,7 @@
                 </div>
             </form>
             <div>
-                <span>Have an acccount? <a href="#registerModal" data-bs-toggle="modal" data-bs-target="#loginModal">Log in</a>.</span>
+                <span>Already have an acccount? <a href="#registerModal" data-bs-toggle="modal" data-bs-target="#loginModal">Log in</a>.</span>
             </div>
         </div>
     </div>
