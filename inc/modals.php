@@ -1,7 +1,7 @@
 <div class="modal fade" id="loginModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
-            <form>
+            <form action="userLogin.php" method="POST">
                 <div class="modal-header d-flex align-items-center">
                     <i class="bi bi-person-circle fs-4 me-2"></i> <h1 class="modal-title fs-5">User Login</h1>
                     <button type="reset" class="btn-close shadow-none" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -9,20 +9,20 @@
                 <div class="modal-body">
                     <div class="mb-3">
                         <label class="form-label">Email address</label>
-                        <input type="email" class="form-control shadow-none">
+                        <input type="email" class="form-control shadow-none" name="uemail">
                     </div>
                     <div class="mb-4">
                         <label class="form-label">Password</label>
-                        <input type="password" class="form-control shadow-none">
+                        <input type="password" class="form-control shadow-none" name="upasswd">
                     </div>
                     <div class="d-flex align-items-center justify-content-between">
-                        <button type="submit" class="btn btn-dark shadow-none">Login</button>
+                        <button type="submit" class="btn btn-dark shadow-none" name="userLogin">Login</button>
                         <a href="javascript: void(0)" class="text-secondary text-decoration-none">Forgot Password?</a>
                     </div>
                 </div>
             </form>
 
-            <div>
+            <div style='text-align: center'>
                 <span>Don't have an acccount?<a href="#registerModal" data-bs-toggle="modal" data-bs-target="#registerModal">Create one</a>.</span>
             </div>
         </div>
@@ -85,7 +85,7 @@
                         </div>
                     </div>
                     <div class="text-center">
-                    <button type="submit" class="btn btn-dark shadow-none" name="register">Register</button>
+                    <button type="submit" id="registerBtn" class="btn btn-dark shadow-none" name="register">Register</button>
                     </div>
                 </div>
                     <div class="mb-3">
@@ -97,3 +97,26 @@
         </div>
     </div>
 </div>
+
+
+<script>
+    document.getElementById("registerBtn").addEventListener("click", function () {
+        var form = document.getElementById("registerForm");
+        var formData = new FormData(form);
+
+        fetch(form.action, {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => response.text())
+        .then(result => {
+            var alertContainer = document.getElementById("alertContainer");
+            alertContainer.innerHTML = result;
+        })
+        .catch(error => {
+            console.error('Error:', error);
+            var alertContainer = document.getElementById("alertContainer");
+            alertContainer.innerHTML = '<div class="alert alert-danger">Form submission failed</div>';
+        });
+    });
+</script>

@@ -45,14 +45,29 @@
                     $iquery = mysqli_query($con, $insertquery);
 
                     if ($iquery) {
-                        echo "Registration successful!";
+                        // echo "Registration successful!";
+                        echo '<script>
+                                alert("Registration successful!");
+                               
+                                window.location = "index.php";
+                            </script>';
                     } else {
-                        echo "Registration failed!";
+                        // echo "Registration failed!";
+                        echo '<script>
+                                var alertContainer = document.getElementById("alertContainer");
+                                alertContainer.innerHTML = \'<div class="alert alert-danger">Registration failed!</div>\';
+                                window.location = "index.php";
+                            </script>';
+
                     }
                     
                 }
                 else{
-                    echo "Passwords do not match";
+                    // echo "Passwords do not match";
+                    echo '<script>
+                            alert("Passwords do not match")
+                            window.location = "index.php";
+                        </script>';
                 }
             }
         }
